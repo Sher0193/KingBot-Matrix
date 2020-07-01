@@ -26,13 +26,6 @@ client.on("room.message", async (roomId, event) => {
     const args = message.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     
-    if (command === "test") {
-        client.sendMessage(roomId, {
-            "msgtype": "m.notice",
-            "body": "hello!",
-        });
-    }
-    
     if (command === "about") {
         client.sendMessage(roomId, {
             "msgtype": "m.notice",
